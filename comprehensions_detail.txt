@@ -1,0 +1,43 @@
+
+Comprehensions are concise ways to create lists, dictionaries, sets  in Python.They simplify the process of generating these collections compared to traditional loops.
+ Python supports several types of comprehensions: list comprehensions, dictionary comprehensions, set comprehensions.
+List comprehensions are used to create a new list by applying an expression to each item in an existing list or iterable.
+[expression for item in iterable if condition]
+List Comprehension: [item for item in list if item % 3 == 0]
+This comprehension iterates through each item in the list.
+It includes item in the new list if item % 3 == 0 (i.e., the item is divisible by 3).
+
+List Comprehension: [item ** 3 for item in list if item % 3 != 0]
+This comprehension iterates through each item in the list.
+It includes item ** 3 in the new list if item % 3 != 0 (i.e., the item is not divisible by 3).
+item ** 3 means raising item to the power of 3 (cubing the item
+For list = [4, 45, 9, 81, 3], the items not divisible by 3 are 4.
+Therefore, the output of the list comprehension is [4 ** 3] which is [64].
+
+Dictionary comprehensions are used to create a new dictionary by applying an expression to each key-value pair in an existing dictionary or iterable.
+{key_expression: value_expression for item in iterable if condition}
+
+k.upper(): Converts the key k to uppercase.
+dict_1.get(k.lower(), 0): Retrieves the value associated with the lowercase version of k in dict_1. If k.lower() does not exist, it returns 0.
+dict_1.get(k.upper(), 0): Retrieves the value associated with the uppercase version of k in dict_1. If k.upper() does not exist, it returns 0.
+The sum of these two values is then assigned to the new key k.upper().
+in first iteration for k = 'a', k.upper() ='A' , it takes the values of both A and sum up ,resulting pair 'A' is 11,
+in Second iteration for k = 'b', k.upper() = 'B', it takes values of both B and sum  , resulting pair 'B' is 19.
+similary in 3rd iteration for  k = 'A', k.upper() ='A' , it takes the values of both A and sum up ,resulting pair 'A' is 11
+in last or 4th iteration for k = 'B' , k.upper() = 'B', it takes values of both B and sum  , resulting pair 'B' is 19.
+{'A': 11, 'B': 19}
+
+
+Set comprehensions are used to create a new set by applying an expression to each item in an existing iterable.
+{expression for item in iterable if condition}
+The set comprehension iterates over each element x in the list [4, 6, 3, 4] and computes x**2 for each element:
+For First Iteration: x = 4 , x**2 = 4**2 = 16
+For Second Iteration: x = 6 , x**2 = 6**2 = 36
+For Third Iteration: x = 3 , x**2 = 3**2 = 9
+In last iteration : x = 4 (again) , x**2 = 4**2 = 16 (duplicate) , set automatically aliminates the duplicate values.
+{16, 9, 36}
+
+
+
+
+
